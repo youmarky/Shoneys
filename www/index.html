@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Ionic App</title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <script src="js/ionic.bundle.js"></script>
+    <script src="js/lodash.mobile.js"></script>
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/SFUIDisplayLight.css" rel="stylesheet">
+    <script src="js/app.js"></script>
+    <script src="cordova.js"></script>
+</head>
+
+<body ng-app="ionicApp" animation="slide-left-right-ios7">
+    <ion-nav-bar class="nav-title-slide-ios7 bar-positive">
+        <ion-nav-back-button class="button-icon ion-arrow-left-c">
+        </ion-nav-back-button>
+    </ion-nav-bar>
+
+    <ion-side-menus enable-menu-with-back-views="false">
+        <ion-side-menu-content>
+            <ion-nav-bar class="bar-stable">
+                <ion-nav-back-button class="button-icon ion-arrow-left-c">
+                </ion-nav-back-button>
+                <ion-nav-buttons side="left">
+                    <button class="button button-icon button-clear ion-navicon" menu-toggle="left" style="color:#ee2e24">
+                    </button>
+                </ion-nav-buttons>
+            </ion-nav-bar>
+            <ion-nav-view></ion-nav-view>
+        </ion-side-menu-content>
+        <ion-side-menu side="left" width="333" style="background-image: url('../img/gray.png');-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;">
+            <ion-content>
+                <ion-list>
+                    <ion-item menu-close class="ion-sidenav-item"><img src="img/shoneys_logo_sidebar.png" style="height:30px"></ion-item>
+                    <ion-item menu-close ng-click="login()" class="ion-sidenav-item">Home<i class="icon ion-home icon-size"></i></ion-item>
+                    <ion-item menu-close href="#/app/offers" class="ion-sidenav-item">Offers<i class="icon ion-pricetag icon-size icon-flipped"></i></ion-item>
+                    <ion-item menu-close href="#/app/browse" class="ion-sidenav-item">Feedback<i class="icon ion-android-textsms icon-size"></i></ion-item>
+                    <ion-item menu-close href="#/app/playlists" class="ion-sidenav-item">Rewards<i class="icon ion-android-star icon-size"></i></ion-item>
+                    <ion-item menu-close href="#/app/playlists" class="ion-sidenav-item">Location<i class="icon ion-android-pin icon-size"></i></ion-item>
+                    <ion-item menu-close href="#/app/playlists" class="ion-sidenav-item">Menu<i class="icon ion-spoon icon-size"></i><i class="icon ion-fork icon-size" style="margin-left:3px;"></i></ion-item>
+                    <ion-item menu-close href="#/app/playlists" class="ion-sidenav-item">About Me<i class="icon ion-person icon-size"></i></ion-item>
+                </ion-list>
+            </ion-content>
+        </ion-side-menu>
+    </ion-side-menus>
+
+
+
+    <script id="intro.html" type="text/ng-template">
+        <ion-view title="{{pageoffersTitle}}">
+            <!--ion-nav-buttons side="left">
+          <button class="button button-positive button-clear no-animation"
+                  ng-click="startApp()" ng-if="!slideIndex">
+            Skip Intro
+          </button>
+          <button class="button button-positive button-clear no-animation"
+                  ng-click="previous()" ng-if="slideIndex > 0">
+            Previous Slide
+          </button>
+        </ion-nav-buttons-->
+            <ion-nav-buttons side="right">
+                <button class="button button-positive button-clear no-animation" ng-click="next()" ng-if="slideIndex != 2">
+                    Next >
+                </button>
+                <button class="button button-positive button-clear no-animation" ng-click="toIntro()" ng-if="slideIndex == 2">
+                    Home
+                </button>
+            </ion-nav-buttons>
+            <ion-slide-box on-slide-changed="slideChanged(index)">
+                <ion-slide>
+                    <img src="img/slider/1_kid.png" style="width: 100%;">
+                </ion-slide>
+                <ion-slide>
+                    <img src="img/slider/2_heros.jpg" style="width: 100%;">
+                </ion-slide>
+                <ion-slide>
+                    <img src="img/slider/3_all_american.jpg" style="width: 100%;">
+                </ion-slide>
+                <ion-slide>
+                    <img src="img/slider/4_students.jpg" style="width: 100%;">
+                </ion-slide>
+                <ion-slide>
+                    <img src="img/slider/5_reward2.jpg" style="width: 100%;">
+                </ion-slide>
+                <ion-slide>
+                    <img src="img/slider/6_reward.jpg" style="width: 100%;">
+                </ion-slide>
+            </ion-slide-box>
+        </ion-view>
+    </script>
+
+    <script id="offers.html" type="text/ng-template">
+        <ion-view title="{{pageoffersTitle}}">
+            <img src="img/slider/1_kid.png">
+        </ion-view>
+    </script>
+    <script id="feedback.html" type="text/ng-template">
+        <ion-view title="{{pagefeedbackTitle}}" class="feedback-page">
+            <div class="feedback-content">
+                <p class="please-rate">Please rate your overall experience</p>
+                <rating ng-model="data.rating" max="data.max"></rating>
+            </div>
+        </ion-view>
+    </script>
+    <script id="rewards.html" type="text/ng-template">
+        <ion-view title="{{pagerewardsTitle}}">
+            <img src="img/slider/3_all_american.jpg">
+        </ion-view>
+    </script>
+    <script id="location.html" type="text/ng-template">
+        <ion-view title="{{pagefindshoneysTitle}}">
+            <img src="img/slider/4_students.jpg">
+        </ion-view>
+    </script>
+    <script id="menu.html" type="text/ng-template">
+        <ion-view title="{{pagemenuTitle}}">
+            <img src="img/slider/5_reward2.jpg" </ion-view>
+    </script>
+    <script id="about.html" type="text/ng-template">
+        <ion-view title="{{pagehomeTitle}}">
+            <img src="img/slider/6_reward.jpg">
+        </ion-view>
+    </script>
+
+</body>
+
+</html>

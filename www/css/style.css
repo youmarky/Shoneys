@@ -1,0 +1,161 @@
+body {}
+
+.slider {
+    height: 100%;
+}
+
+.welcome-view .bottom-content .facebook-sign-in {
+    font-weight: 500;
+    color: #FFF;
+    background-color: #ee2e24;
+    border-color: #ee2e24;
+    font-family: 'SFUIDisplayLight';
+    font-size: 24px; 
+}
+
+.welcome-view .bottom-content .mail-sign-in {
+    font-weight: 500;
+    color: #ee2e24;
+    background-color: #FFF;
+    border-color: #FFF;
+    font-family: 'SFUIDisplayLight';
+    font-size: 24px; 
+}
+
+.welcome-view .bottom-content .skip-btn {
+    font-weight: 500;
+    color: #FFF;
+    background-color: #535158;
+    border-color: #535158;
+    font-family: 'SFUIDisplayLight';
+    font-size: 24px; 
+}
+
+.splash {
+  background: url(../img/login_bg.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.no-padding {
+    padding: 0px !important;
+}
+
+.register-via{
+    text-align: center;
+    font-family: 'SFUIDisplayLight';
+    font-size: 18px;
+    color: white;
+}
+
+
+.slider-slide {
+    padding-top: 44px;
+    color: #000;
+    background-color: #fff;
+    text-align: center;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+}
+
+#logo {
+    margin: 30px 0px;
+}
+
+#list {
+    width: 170px;
+    margin: 30px auto;
+    font-size: 20px;
+}
+
+#list ol {
+    margin-top: 30px;
+}
+
+#list ol li {
+    text-align: left;
+    list-style: decimal;
+    margin: 10px 0px;
+}
+
+img.title-image {
+    height: 40px;
+    padding-top: 10px;
+}
+
+.slider-pager-page.active {
+    color: red !important;
+}
+
+.slider-pager {
+    position: absolute;
+    bottom: 25px;
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+}
+
+.ion-sidenav-item {
+    text-align: right;
+    border-style: none;
+    color: white;
+    border-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+    font-family: 'SFUIDisplayLight';
+    font-size: 24px;
+}
+
+.item-complex .item-content {
+    padding: 16px 16px 16px 16px;
+    background-color: transparent;
+}
+
+.icon-size {
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.bar-header {
+    top: 0;
+    border-top-width: 0;
+    border-bottom-width: 0px !important;
+}
+
+.bar.bar-stable {
+    border-color: #b2b2b2;
+    background-color: white !important;
+    /* background-image: linear-gradient(0deg, #b2b2b2, #b2b2b2 50%, transparent 50%); */
+    color: #444;
+}
+
+.feedback-page {
+    background-color: #535158;
+}
+
+ul.rating li {
+    display: inline;
+    border: 0px;
+    background: none;
+    padding: 5px 10px;
+}
+
+ul.rating li i {
+    font-size: 30px;
+}
+
+.feedback-content {
+    position: relative;
+    top: 45px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 30px;
+}
+
+.please-rate {
+    color: white;
+    text-align: center;
+    font-family: 'SFUIDisplayLight';
+    font-size: 21px;
+}
